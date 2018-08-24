@@ -1,3 +1,4 @@
+[![NPM version](http://img.shields.io/npm/v/angular-container.svg)](https://www.npmjs.org/package/angular-container)
 # Angular Container
 
 Here at Opteo we recently undertook the process of updating our large Angular.js based front-end application (composed of many controllers, services and directives) to Vue, and 
