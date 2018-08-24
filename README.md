@@ -47,25 +47,26 @@ export default {
   mounted() {
     const angularContainer = this.$refs.ng
     angularContainer.init() // Instantiate the Angular.js instance after Vue has mounted
+    const angularInstance = angularContainer.getInstance()
     
     /* Use controllers, services and directives that you need */
-    angularContainer.service("userService", ["$injector"], ($injector)  => {
+    angularInstance.service("userService", ["$injector", ($injector)  => {
       return {
         getSomeData() {
           return fetch("https://example.com/api/")
         }
       }
-    })
+    }])
     
     // Controller    
-    angularContainer.controller("userCtrl", ["$scope", "userService",], ($scope, userService) => {
+    angularInstance.controller("userCtrl", ["$scope", "userService", ($scope, userService) => {
       $scope.items = [1, 2, 3, 4, 5]
       $scope.addItem = () => $scope.items.push(Math.random())
       const data = await userService.getSomeData()
-    })
+    }])
     
     // Directive
-    angularContainer.directive("blue", () => {
+    angularInstance.directive("blue", () => {
       return {
         restrict: "E",
         transclude: true,
