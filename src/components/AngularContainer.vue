@@ -1,12 +1,13 @@
 <template>
     <div :ng-controller="ctrl"
         :id="name"
-        :ref="`ng__${name}`"
-        v-show="status">
+        :ref="`ng__${name}`">
         <slot>Angular app instance must be used or removed.</slot>
     </div>
 </template>
 <script>
+import angular from 'angular'
+
 export default {
     name: 'AngularContainer',
     props: {
@@ -21,10 +22,6 @@ export default {
                 return value.substr(value.length - 4) === 'Ctrl'
             },
         },
-        status: {
-            type: Boolean,
-            required: false,
-        },
     },
     data() {
         return {
@@ -32,7 +29,7 @@ export default {
         }
     },
     methods: {
-        init({ curly = false }) {
+        init(curly = false) {
             const appContainer = this.$refs[`ng__${this.name}`]
             let settings = []
 
@@ -46,7 +43,7 @@ export default {
                 ]
             }
 
-            this.app = angularLib.module(this.name, [], settings)
+            this.app = angular.module(this.name, [], settings)
 
             angular.element(() => {
                 angular.bootstrap(appContainer, [this.name], {
@@ -56,6 +53,9 @@ export default {
         },
         forceUpdate() {
             this.$forceUpdate()
+        },
+        getInstance() {
+            return this.app
         },
     },
     destroyed() {
