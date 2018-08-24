@@ -3,7 +3,7 @@
 ![](https://img.shields.io/github/last-commit/opteo/angular-container.svg)
 # Angular Container
 
-Here at Opteo we recently undertook the process of updating our large Angular.js based front-end application (composed of many controllers, services and directives) to Vue, and 
+Here at Opteo, we recently undertook the process of updating our large Angular.js based front-end application (composed of many controllers, services and directives) to Vue, and 
 as migrating our entire application was expected to take several weeks (which later became months), we built the <b>angular-container</b> Vue component as a simple way to use our existing Angular pages within our new Vue based app.
 
 ### Features
