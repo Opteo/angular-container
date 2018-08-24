@@ -25,11 +25,6 @@ export default {
             type: Boolean,
             required: false,
         },
-        curly: {
-            type: Boolean,
-            required: false,
-            default: false,
-        },
     },
     data() {
         return {
@@ -37,11 +32,11 @@ export default {
         }
     },
     methods: {
-        init() {
+        init({ curly = false }) {
             const appContainer = this.$refs[`ng__${this.name}`]
             let settings = []
 
-            if (!this.curly) {
+            if (!curly) {
                 settings = [
                     '$interpolateProvider',
                     $interpolateProvider => {
