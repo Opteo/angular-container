@@ -1,6 +1,6 @@
 {
     "name": "angular-container",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "main": "./dist/angular-container.common.js",
     "files": [
         "dist/*",
