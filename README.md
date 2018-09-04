@@ -1,8 +1,9 @@
 [![NPM version](https://img.shields.io/npm/v/angular-container.svg)](https://www.npmjs.org/package/angular-container)
+![](https://img.shields.io/npm/dm/angular-container.svg)
+![](https://img.shields.io/github/last-commit/opteo/angular-container.svg)
 # Angular Container
 
-Here at Opteo we recently undertook the process of updating our large Angular.js based front-end application (composed of many controllers, services and directives) to Vue, and 
-as migrating our entire application was expected to take several weeks (which later became months), we built the <b>angular-container</b> Vue component as a simple way to use our existing Angular pages within our new Vue based app.
+Here at Opteo, we recently undertook the process of updating our large, Angular.js-based, front-end application (composed of many controllers, services and directives) to Vue. Migrating our entire application was expected to take several weeks (which later became months), so we built the <b>angular-container</b> Vue component as a simple way to use our existing Angular pages within our new Vue-based app.
 
 ### Features
 - Use existing Angular based controllers/services/directives within `.vue` components
@@ -11,10 +12,10 @@ as migrating our entire application was expected to take several weeks (which la
 
 ### Notes:
 By default, non curly braces are used for rendering angular-container `$scope` variables, and instead square brackets are used (this can be overwritten). 
-This is due to Vue also using curly braces for data binding, which would cause mounting issues and conflicts.
+The default is due to Vue using curly braces for data binding, which causes mounting issues and conflicts.
 
 ### Installation
-An installation of Angular.js is required for this component to work correctly. This can be done via yarn or npm:
+An installation of Angular.js is required for this component to work correctly. Install via yarn or npm:
 ```bash
 yarn add angular angular-container
 ```
