@@ -1,6 +1,6 @@
 {
     "name": "angular-container",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "main": "./dist/angular-container.common.js",
     "files": [
         "dist/*",
@@ -28,6 +28,14 @@
         "angular-container": "^0.1.3",
         "vue-template-compiler": "^2.5.17"
     },
+    "keywords": [
+        "angular",
+        "vue",
+        "vuejs",
+        "angular container",
+        "vuejs angular",
+        "vue angular component"
+    ],
     "browserslist": [
         "> 1%",
         "last 2 versions",
